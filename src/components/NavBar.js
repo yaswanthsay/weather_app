@@ -3,9 +3,8 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { auth } from '../config/firebase';
 import { useNavigate } from 'react-router-dom';
-import {toast,ToastContainer} from 'react-toastify'
+import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ButtonAppBar() {

@@ -43,7 +43,7 @@ function WeatherSearch() {
                         <ToastContainer autoClose="2000" position='bottom-right'/>
                     </div>
                    <div style={{marginTop:"100px",marginLeft:"500px"}}>
-                   <p style={{color:"#3F76DC",marginLeft:"13px",fontSize:"18px"}}>Are you looking fo weather report?</p>
+                   <p style={{color:"#3F76DC",marginLeft:"13px",fontSize:"18px"}}>Are you looking for weather report?</p>
                    <img src={sun} alt="rain" style={{width:"50px",position:"relative",top:"32px",zIndex:"-1"}}/>
                     <div style={{ display: "flex",borderRadius:"5px",boxShadow:"1px 0px 2px 2px #E6E6E6",width:"300px",backgroundColor:"white"}}>
                         <img src={search} alt='search' onClick={weatherSearch} style={{ width: "20px", height: "20px",cursor:"pointer",marginTop:"10px",marginLeft:"40px"}} />

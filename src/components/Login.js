@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Grid } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
 import { auth,googleProvider } from '../config/firebase';
 import {sendSignInLinkToEmail,signInWithPopup} from 'firebase/auth'
 import {toast,ToastContainer} from 'react-toastify'
@@ -17,7 +17,7 @@ function Login() {
     const navigate = useNavigate()
 
     const actionCodeSettings = {
-        url: 'https://weather-app-31476.web.app/weather',
+        url: 'https://weather-app-31476.web.app/weatherSearch',
         handleCodeInApp: true,
       };
 
@@ -42,24 +42,24 @@ function Login() {
   }
 
     return (
-        <>
-            <div style={{ marginTop: "70px", marginLeft: "500px" }}>
+        <div>
                 <div>
                     <ToastContainer autoClose={2000} position="bottom-right"/>
                 </div>
-                <Grid container spacing={2}>
-                    <Grid item xs>
+                <Grid container spacing={2} wrap='nowrap'>
+                    <Grid xs="auto" >
+                        <div style={{position: "fixed",top: "50%",left: "50%",transform: "translate(-50%, -50%)"}}>
                         <h4 style={{ marginLeft: "84px" }}>Login</h4>
                         <br />
                         <TextField type="email" size='small' label="Email" name='email' onChange={(e)=> setEmail(e.target.value)}/>
                         <br />
-                        <Button variant='contained' type="submit" size='small' style={{ marginTop: "20px", width: "223px" }} onClick={login}>Login</Button>
-                        <p style={{marginLeft:"100px"}}>OR</p>
-                        <Button type="submit" variant="contained" size="small" style={{ marginTop: "20px", width: "223px",backgroundColor:"white",color:"black" }} onClick={signInWithGoogle}> Sign up with Google</Button>
+                        <Button variant='contained' type="submit" size='small' style={{ width: "223px",marginTop:"20px" }} onClick={login}>Login</Button>
+                        <p style={{marginLeft:"95px"}}>OR</p>
+                        <Button type="submit" variant="contained" size="small" style={{ width: "223px",backgroundColor:"white",color:"black" }} onClick={signInWithGoogle}> Sign up with Google</Button>
+                        </div>
                     </Grid>
-                </Grid>
-            </div>
-        </>
+                    </Grid>
+        </div>
     )
 }
 

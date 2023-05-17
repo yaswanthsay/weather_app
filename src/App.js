@@ -1,10 +1,10 @@
 import React from 'react'
 import Home from './components/Home'
-import Login from './components/Login'
-import WeatherSearch from './components/WeatherSearch'
+// import WeatherSearch from './components/WeatherSearch'
 import { Routes, Route } from 'react-router-dom'
-import EmailLink from './components/EmailLink'
 import Grid from '@mui/material/Unstable_Grid2';
+import Register from './components/Register';
+import WeatherReport from './components/WeatherReport';
 
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
         <Grid xs="auto">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/weatherSearch" element={<WeatherSearch />} />
-            <Route path="/emailLink" element={<EmailLink />} />
+            {/* <Route path="/weatherSearch" element={<WeatherSearch />} /> */}
+            <Route path='/register' element={<Register/>}/>
+            <Route path="/weatherReport" element={<WeatherReport/>}/>
           </Routes>
         </Grid>
       </Grid>
